@@ -1,6 +1,3 @@
-## Cloning this UI
-
-![clone]("https://github.com/Jacob-dvlp/applogin/blob/master/clone.jpg")
 
 
 
