@@ -1,6 +1,6 @@
 ## Cloning this UI
 
-![clone]("https://github.com/Jacob-dvlp/applogin/blob/master/Captura%20de%20ecr%C3%A3%202021-06-29%20042828.jpg")
+![clone]("https://github.com/Jacob-dvlp/applogin/blob/master/clone.jpg")
 
 
 
