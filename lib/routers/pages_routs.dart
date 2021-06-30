@@ -6,11 +6,15 @@ class PagesRouts {
     GetPage(
         name: NamesOfPages.HOME,
         page: () => Welcome(),
-        transition: Transition.topLevel),
+        transition: Transition.zoom),
     GetPage(
         name: NamesOfPages.LOGIN,
         page: () => Login(),
-        transition: Transition.topLevel,
-        title: "Login")
+        transition: Transition.zoom,
+        title: "Login"),
+    GetPage(
+        name: NamesOfPages.RESGISTER,
+        page: () => Register(),
+        transition: Transition.zoom),
   ];
 }

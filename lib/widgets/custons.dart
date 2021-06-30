@@ -67,6 +67,47 @@ class Button extends StatelessWidget {
   }
 }
 
+class ButtonSign extends StatelessWidget {
+  final double value = 10;
+  final String? title;
+  final Color? colors;
+  final TextStyle? style;
+
+  const ButtonSign({
+    Key? key,
+    this.title,
+    this.colors,
+    this.style,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Container(
+        width: 340,
+        height: 60,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(value),
+              topRight: Radius.circular(value),
+              bottomLeft: Radius.circular(value),
+              bottomRight: Radius.circular(value)),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(primary: Colores("009DFF")),
+            onPressed: () {},
+            child: Text(
+              "$title",
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colores("#FFFFFF"), fontSize: 19),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class ButoonEmail extends StatelessWidget {
   final double value = 10;
   final String? title;
@@ -113,7 +154,8 @@ class ButoonEmail extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(right: 30, left: 20),
-                  child: CircleAvatar(child: Icon(icon)),
+                  child: CircleAvatar(
+                      backgroundColor: Colores("#009DFF"), child: Icon(icon)),
                 ),
                 Container(
                   width: 20,
@@ -130,6 +172,42 @@ class ButoonEmail extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class TextFormied extends StatelessWidget {
+  final int? value;
+  final IconData? icon;
+  final Widget? suffixIcon;
+  final String? hintext;
+  final bool obscureText;
+
+  const TextFormied({
+    Key? key,
+    this.value,
+    this.icon,
+    this.hintext,
+    required this.obscureText,
+    this.suffixIcon,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      obscureText: obscureText,
+      decoration: InputDecoration(
+          hoverColor: Colors.red,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(13),
+          ),
+          suffixIcon: suffixIcon,
+          prefixIcon: Icon(
+            icon,
+            color: Colores("#009DFF"),
+          ),
+          hintText: hintext,
+          hintStyle: TextStyle()),
     );
   }
 }
