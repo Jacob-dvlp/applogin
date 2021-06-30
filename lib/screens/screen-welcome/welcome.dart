@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:login_page/styles/styles.dart';
 import 'package:login_page/widgets/custons.dart';
 
@@ -19,7 +22,9 @@ class Welcome extends StatelessWidget {
               child: CircleAvatar(
                 backgroundColor: Colores("#EBF7FF"),
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    exit(0);
+                  },
                   icon: Icon(Icons.chevron_left_sharp),
                 ),
               ),
@@ -62,11 +67,16 @@ class Welcome extends StatelessWidget {
                   "Already have account?",
                   style: TextStyle(fontSize: 15),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 3),
-                  child: Text(
-                    "Login",
-                    style: TextStyle(color: Colores("#77BDE6"), fontSize: 15),
+                GestureDetector(
+                  onTap: () {
+                    Get.toNamed("/login");
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 3),
+                    child: Text(
+                      "Login",
+                      style: TextStyle(color: Colores("#77BDE6"), fontSize: 15),
+                    ),
                   ),
                 ),
               ],

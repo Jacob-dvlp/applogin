@@ -7,5 +7,10 @@ class PagesRouts {
         name: NamesOfPages.HOME,
         page: () => Welcome(),
         transition: Transition.topLevel),
+    GetPage(
+        name: NamesOfPages.LOGIN,
+        page: () => Login(),
+        transition: Transition.topLevel,
+        title: "Login")
   ];
 }
