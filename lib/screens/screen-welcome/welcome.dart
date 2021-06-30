@@ -17,6 +17,7 @@ class Welcome extends StatelessWidget {
             Align(
               alignment: Alignment.topLeft,
               child: CircleAvatar(
+                backgroundColor: Colores("#EBF7FF"),
                 child: IconButton(
                   onPressed: () {},
                   icon: Icon(Icons.chevron_left_sharp),
@@ -39,29 +40,35 @@ class Welcome extends StatelessWidget {
               ),
             ),
             Button(
-              title: "Login with Google",
-              colors: Colors.redAccent,
-              icon: FontAwesomeIcons.google,
-            ),
+                title: "Login with Google",
+                colors: Colors.redAccent,
+                icon: FontAwesomeIcons.google,
+                colorsCirc: Colors.red.shade500),
             Button(
               title: "Login with Facebook",
-              colors: Colors.blueAccent,
+              colors: Colores("#177EE6"),
               icon: FontAwesomeIcons.facebook,
+              colorIcon: Colors.white,
             ),
             ButoonEmail(
               title: "Login with Email",
-              style: TextStyle(color: Colors.grey),
               colors: Colores("#F6FCFF"),
               icon: Icons.email,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Already have account?"),
                 Text(
-                  "Login",
-                  style: TextStyle(color: Colores("#77BDE6")),
-                )
+                  "Already have account?",
+                  style: TextStyle(fontSize: 15),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 3),
+                  child: Text(
+                    "Login",
+                    style: TextStyle(color: Colores("#77BDE6"), fontSize: 15),
+                  ),
+                ),
               ],
             )
           ],
