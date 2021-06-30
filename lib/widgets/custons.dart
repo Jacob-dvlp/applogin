@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Button extends StatelessWidget {
   final double value = 10;
   final String? title;
   final Color? colors;
   final IconData? icon;
+  final TextStyle? style;
+  final Color? colorIcon;
 
-  const Button({Key? key, this.title, this.colors, this.icon}) : super(key: key);
+  const Button(
+      {Key? key,
+      this.title,
+      this.colors,
+      this.icon,
+      this.style,
+      this.colorIcon})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +39,12 @@ class Button extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 30, left: 20),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Icon(icon),
+                    child: CircleAvatar(
+                      child: Icon(
+                        icon,
+                        color: colors,
+                      ),
+                    ),
                   ),
                 ),
                 Container(
@@ -41,12 +54,63 @@ class Button extends StatelessWidget {
                   child: Text(
                     "$title",
                     textAlign: TextAlign.center,
+                    style: style,
                   ),
                 ),
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class ButoonEmail extends StatelessWidget {
+  final double value = 10;
+  final String? title;
+  final Color? colors, colorIcon;
+  final IconData? icon;
+  final TextStyle? style;
+
+  const ButoonEmail(
+      {Key? key,
+      this.title,
+      this.colors,
+      this.icon,
+      this.style,
+      this.colorIcon})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Container(
+        width: 340,
+        height: 65,
+        child: ClipRRect(
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(value),
+                topRight: Radius.circular(value),
+                bottomLeft: Radius.circular(value),
+                bottomRight: Radius.circular(value)),
+            child: RaisedButton(
+              shape: ShapeBorder.lerp(3, 3, 2),
+              color: colors,
+                onPressed: () {},
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right: 30, left: 20),
+                      child: CircleAvatar(child: Icon(icon)),
+                    ),
+                    Container(
+                      width: 20,
+                    ),
+                    Text("$title"),
+                  ],
+                ))),
       ),
     );
   }

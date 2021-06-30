@@ -48,15 +48,21 @@ class Welcome extends StatelessWidget {
               colors: Colors.blueAccent,
               icon: FontAwesomeIcons.facebook,
             ),
-            Button(
+            ButoonEmail(
               title: "Login with Email",
-              colors: Colors.blueAccent.withAlpha(200),
+              style: TextStyle(color: Colors.grey),
+              colors: Colores("#F6FCFF"),
               icon: Icons.email,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text("Already have account?"), 
-              Text("Login",style: TextStyle(),)],
+              children: [
+                Text("Already have account?"),
+                Text(
+                  "Login",
+                  style: TextStyle(color: Colores("#77BDE6")),
+                )
+              ],
             )
           ],
         ),
