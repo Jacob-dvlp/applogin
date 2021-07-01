@@ -1,6 +1,12 @@
 
  ## IMAGEM ORIGINAL
  
+ #Flutter #Dart 
+ <br>
+ ## 🛠⚙ State maneger
+ ⚙ GetX <br>
+
+ 
  ![ezgif.com-gif-maker](https://github.com/Jacob-dvlp/applogin/blob/master/ezgif.com-gif-maker.jpg)
 
 
