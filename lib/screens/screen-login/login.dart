@@ -60,7 +60,6 @@ class Login extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 200),
                 child: Container(
-                  
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
@@ -102,11 +101,14 @@ class Login extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 225),
-                        child: Text(
-                          "Forgt Password ?",
-                          style: TextStyle(
-                            color: Colores("#009DFF"),
-                            fontSize: 18,
+                        child: GestureDetector(
+                          onTap: () => Get.toNamed("/password"),
+                          child: Text(
+                            "Forgt Password ?",
+                            style: TextStyle(
+                              color: Colores("#009DFF"),
+                              fontSize: 18,
+                            ),
                           ),
                         ),
                       ),

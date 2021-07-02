@@ -17,18 +17,18 @@ class Welcome extends StatelessWidget {
         padding: const EdgeInsets.only(top: 70, left: 10),
         child: Column(
           children: [
-            Align(
-              alignment: Alignment.topLeft,
-              child: CircleAvatar(
-                backgroundColor: Colores("#EBF7FF"),
-                child: IconButton(
-                  onPressed: () {
-                    exit(0);
-                  },
-                  icon: Icon(Icons.chevron_left_sharp),
-                ),
-              ),
-            ),
+            // Align(
+            //   alignment: Alignment.topLeft,
+            //   child: CircleAvatar(
+            //     backgroundColor: Colores("#EBF7FF"),
+            //     child: IconButton(
+            //       onPressed: () {
+            //         exit(0);
+            //       },
+            //       icon: Icon(Icons.chevron_left_sharp),
+            //     ),
+            //   ),
+            // ),
             SvgPicture.asset("assets/svgs/undraw_connected_world_wuay.svg",
                 width: 300),
             Text(

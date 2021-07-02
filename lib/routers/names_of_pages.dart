@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:login_page/screens/screen-login/login.dart';
+import 'package:login_page/screens/screen-new-password/password.dart';
 import 'package:login_page/screens/screen-resgiter/register.dart';
 import 'package:login_page/screens/screen-welcome/welcome.dart';
 
@@ -9,4 +10,5 @@ class NamesOfPages {
   static const HOME = "/home";
   static const LOGIN = "/login";
   static const RESGISTER = "/register";
+  static const PASSWORDD = "/password";
 }
