@@ -14,6 +14,7 @@ class Register extends StatelessWidget {
     return GetBuilder<ResgiterController>(
       init: ResgiterController(),
       builder: (_) => Scaffold(
+        appBar: AppBar(),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -23,21 +24,6 @@ class Register extends StatelessWidget {
                 color: Colores("#009DFF"),
                 child: Column(
                   children: [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 65, left: 20),
-                        child: CircleAvatar(
-                          backgroundColor: Colores("#FFFFFF"),
-                          child: GestureDetector(
-                            onTap: () => Get.back(),
-                            child: Icon(
-                              Icons.chevron_left,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
                     Container(
                       height: 25,
                     ),

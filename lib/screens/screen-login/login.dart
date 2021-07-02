@@ -13,30 +13,18 @@ class Login extends StatelessWidget {
     return GetBuilder<LoginControllers>(
       init: LoginControllers(),
       builder: (_) => Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colores("#009DFF"),
+        ),
         body: SingleChildScrollView(
-          child: Column(
+          child: Stack(
             children: [
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 1,
+                height: MediaQuery.of(context).size.height / 3,
                 color: Colores("#009DFF"),
                 child: Column(
                   children: [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 65, left: 20),
-                        child: CircleAvatar(
-                          backgroundColor: Colores("#FFFFFF"),
-                          child: GestureDetector(
-                            onTap: () => Get.back(),
-                            child: Icon(
-                              Icons.chevron_left,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
                     Container(
                       height: 25,
                     ),
@@ -66,87 +54,87 @@ class Login extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 90),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(30),
-                              topRight: Radius.circular(30)),
-                          color: Colores("#FFFFFF"),
-                        ),
-                        width: MediaQuery.of(context).size.width,
-                        height: 467,
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 70,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(14.0),
-                              child: TextFormied(
-                                obscureText: false,
-                                hintext: "Email or username",
-                                icon: Icons.email,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(14.0),
-                              child: TextFormied(
-                                obscureText: true,
-                                suffixIcon: IconButton(
-                                  icon: Icon(
-                                    _.password
-                                        ? Icons.visibility_off
-                                        : Icons.visibility,
-                                  ),
-                                  onPressed: () {
-                                    _.updateTextfied();
-                                  },
-                                ),
-                                hintext: "Password",
-                                icon: FontAwesomeIcons.lock,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 225),
-                              child: Text(
-                                "Forgt Password ?",
-                                style: TextStyle(
-                                  color: Colores("#009DFF"),
-                                  fontSize: 18,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 70,
-                            ),
-                            ButtonSign(
-                              title: "Sign in",
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text("Don't have an account ?"),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: GestureDetector(
-                                    onTap: () => Get.toNamed("/register"),
-                                    child: Text(
-                                      "Sign up",
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          color: Colores("#009DFF")),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 200),
+                child: Container(
+                  
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30)),
+                    color: Colores("#FFFFFF"),
+                  ),
+                  width: MediaQuery.of(context).size.width,
+                  height: 467,
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 65,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(14.0),
+                        child: TextFormied(
+                          obscureText: false,
+                          hintext: "Email or username",
+                          icon: Icons.email,
                         ),
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.all(14.0),
+                        child: TextFormied(
+                          obscureText: true,
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              _.password
+                                  ? Icons.visibility_off
+                                  : Icons.visibility,
+                            ),
+                            onPressed: () {
+                              _.updateTextfied();
+                            },
+                          ),
+                          hintext: "Password",
+                          icon: FontAwesomeIcons.lock,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 225),
+                        child: Text(
+                          "Forgt Password ?",
+                          style: TextStyle(
+                            color: Colores("#009DFF"),
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 70,
+                      ),
+                      ButtonSign(
+                        title: "Sign in",
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Don't have an account ?"),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: GestureDetector(
+                              onTap: () => Get.toNamed("/register"),
+                              child: Text(
+                                "Sign up",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colores("#009DFF")),
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ],
