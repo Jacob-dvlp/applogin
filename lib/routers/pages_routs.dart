@@ -5,26 +5,50 @@ class PagesRouts {
   static final routs = [
     GetPage(
       name: NamesOfPages.HOME,
-      page: () => Welcome(),
+      page: () => WelcomePage(),
       transition: Transition.zoom,
       title: "Welcome",
     ),
     GetPage(
         name: NamesOfPages.LOGIN,
-        page: () => Login(),
+        page: () => LoginPage(),
         transition: Transition.zoom,
         title: "Login"),
     GetPage(
       name: NamesOfPages.RESGISTER,
-      page: () => Register(),
+      page: () => RegisterPage(),
       transition: Transition.zoom,
       title: "Resgiter",
     ),
     GetPage(
       name: NamesOfPages.PASSWORDD,
-      page: () => PassWord(),
+      page: () => PassWordPage(),
       transition: Transition.zoom,
       title: "Password",
+    ),
+    GetPage(
+      name: NamesOfPages.CHECKEMAIL,
+      page: () => EmailPage(),
+      transition: Transition.zoom,
+      title: "Email",
+    ),
+    GetPage(
+      name: NamesOfPages.PROGRESS,
+      page: () => ProgressEmail(),
+      transition: Transition.zoom,
+      title: "Loanding",
+    ),
+    GetPage(
+      name: NamesOfPages.CODEPASSWORD,
+      page: () => CodePage(),
+      transition: Transition.zoom,
+      title: "code",
+    ),
+    GetPage(
+      name: NamesOfPages.CREATPASSWORD,
+      page: () => CreatPassword(),
+      transition: Transition.zoom,
+      title: "creat",
     ),
   ];
 }

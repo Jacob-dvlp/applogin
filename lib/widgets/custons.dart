@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:login_page/styles/styles.dart';
 
 class Button extends StatelessWidget {
@@ -72,12 +73,14 @@ class ButtonSign extends StatelessWidget {
   final String? title;
   final Color? colors;
   final TextStyle? style;
+  final String? onPressed;
 
   const ButtonSign({
     Key? key,
     this.title,
     this.colors,
     this.style,
+    this.onPressed,
   }) : super(key: key);
 
   @override
@@ -95,7 +98,7 @@ class ButtonSign extends StatelessWidget {
               bottomRight: Radius.circular(value)),
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(primary: Colores("009DFF")),
-            onPressed: () {},
+            onPressed: () => Get.toNamed("$onPressed"),
             child: Text(
               "$title",
               textAlign: TextAlign.center,
@@ -197,7 +200,6 @@ class TextFormied extends StatelessWidget {
     return TextFormField(
       obscureText: obscureText,
       decoration: InputDecoration(
-          hoverColor: Colors.red,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(13),
           ),
@@ -206,8 +208,34 @@ class TextFormied extends StatelessWidget {
             icon,
             color: Colores("#009DFF"),
           ),
+          counterStyle: TextStyle(backgroundColor: Colors.red),
           hintText: hintext,
           hintStyle: TextStyle()),
+    );
+  }
+}
+
+class TextCode extends StatelessWidget {
+  final FocusNode? focusnode;
+  final Function? function;
+  const TextCode({Key? key, this.focusnode, this.function}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      keyboardType: TextInputType.number,
+      validator: (value) {
+        if (value!.isEmpty) {
+          print("Obrigatório");
+        }
+        if (value.length == 1) return null;
+      },
+      focusNode: focusnode,
+      decoration: InputDecoration(
+        hintStyle: TextStyle(fontWeight: FontWeight.bold),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+      ),
     );
   }
 }

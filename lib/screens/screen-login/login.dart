@@ -5,8 +5,8 @@ import 'package:login_page/screens/controllers_screen/login.dart';
 import 'package:login_page/styles/styles.dart';
 import 'package:login_page/widgets/custons.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class LoginPage extends StatelessWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'package:login_page/styles/styles.dart';
 import 'package:login_page/widgets/custons.dart';
 
-class PassWordPage extends StatelessWidget {
-  const PassWordPage({Key? key}) : super(key: key);
+class CreatPassword extends StatelessWidget {
+  const CreatPassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,14 +46,14 @@ class PassWordPage extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(
-                        "Forgot Password ?",
+                        "Creat new password",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 25),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "Enter your resgistered email below to receive\n password reset  instruction",
+                          "Your new password must be different from\n previously used passwords",
                           style: TextStyle(
                               color: Colors.grey,
                               fontWeight: FontWeight.bold,

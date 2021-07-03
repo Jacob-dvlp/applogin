@@ -5,8 +5,8 @@ import 'package:login_page/screens/controllers_screen/resgiter.dart';
 import 'package:login_page/styles/styles.dart';
 import 'package:login_page/widgets/custons.dart';
 
-class Register extends StatelessWidget {
-  const Register({Key? key}) : super(key: key);
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
