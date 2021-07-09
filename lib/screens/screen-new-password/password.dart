@@ -30,7 +30,7 @@ class PassWordPage extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: CircleAvatar(
-                    backgroundColor: Colores("#F6FCFE"),
+                    backgroundColor: Colores("##D2EDFF"),
                     child: Icon(
                       FontAwesomeIcons.lock,
                       color: Colores("#009DFF"),
@@ -67,10 +67,13 @@ class PassWordPage extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(14.0),
-                  child: TextFormied(
-                    obscureText: false,
-                    hintext: "Email",
-                    icon: Icons.email,
+                  child: Container(
+                    color: Colores("#F6FBFF"),
+                    child: TextFormied(
+                      obscureText: false,
+                      hintext: "Email",
+                      icon: Icons.email,
+                    ),
                   ),
                 ),
                 SizedBox(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_page/screens/controllers_screen/recover_code.dart';
+import 'package:login_page/styles/styles.dart';
 
 class EmailPage extends StatelessWidget {
   const EmailPage({Key? key}) : super(key: key);
@@ -19,6 +20,7 @@ class EmailPage extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.center,
                   child: CircleAvatar(
+                    backgroundColor: Colores("#D2EDFF"),
                     maxRadius: 80,
                     child: Icon(
                       Icons.email_outlined,

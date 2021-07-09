@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:login_page/styles/styles.dart';
 
@@ -222,14 +223,13 @@ class TextCode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLength: 1,
+      smartDashesType: SmartDashesType.disabled,
       keyboardType: TextInputType.number,
-      validator: (value) {
-        if (value!.isEmpty) {
-          print("Obrigatório");
-        }
-        if (value.length == 1) return null;
-      },
       focusNode: focusnode,
+      onChanged: (v) {
+        v = v;
+      },
       decoration: InputDecoration(
         hintStyle: TextStyle(fontWeight: FontWeight.bold),
         border: OutlineInputBorder(

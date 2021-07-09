@@ -75,28 +75,36 @@ class LoginPage extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(14.0),
-                        child: TextFormied(
-                          obscureText: false,
-                          hintext: "Email or username",
-                          icon: Icons.email,
+                        child: Container(
+                          color: Colores("#F6FBFF"),
+                          child: TextFormied(
+                            obscureText: false,
+                            hintext: "Email or username",
+                            icon: Icons.email,
+                          ),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(14.0),
-                        child: TextFormied(
-                          obscureText: true,
-                          suffixIcon: IconButton(
-                            icon: Icon(
-                              _.password
-                                  ? Icons.visibility_off
-                                  : Icons.visibility,
+                        child: Container(
+                          color: Colores("#F6FBFF"),
+                          child: TextFormied(
+                            obscureText: _.password,
+                            suffixIcon: IconButton(
+                              icon: _.password
+                                  ? Icon(
+                                      Icons.visibility,
+                                      color: Colors.blue,
+                                    )
+                                  : Icon(Icons.visibility_off,
+                                      color: Colors.blue),
+                              onPressed: () {
+                                _.updateTextfied();
+                              },
                             ),
-                            onPressed: () {
-                              _.updateTextfied();
-                            },
+                            hintext: "Password",
+                            icon: FontAwesomeIcons.lock,
                           ),
-                          hintext: "Password",
-                          icon: FontAwesomeIcons.lock,
                         ),
                       ),
                       Padding(

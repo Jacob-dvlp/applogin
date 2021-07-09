@@ -62,55 +62,74 @@ class RegisterPage extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(14.0),
-                        child: TextFormied(
-                          obscureText: false,
-                          hintext: "Name",
-                          icon: Icons.person,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(14.0),
-                        child: TextFormied(
-                          obscureText: false,
-                          hintext: "Email or phone",
-                          icon: Icons.email,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(14.0),
-                        child: TextFormied(
-                          obscureText: false,
-                          hintext: "Birthday",
-                          icon: Icons.calendar_today,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(14.0),
-                        child: TextFormied(
-                          obscureText: true,
-                          suffixIcon: IconButton(
-                            icon: Icon(
-                              _.password
-                                  ? Icons.visibility_off
-                                  : Icons.visibility,
-                            ),
-                            onPressed: () {
-                              _.updatePassword();
-                            },
+                        child: Container(
+                          color: Colores("#F6FBFF"),
+                          child: TextFormied(
+                            obscureText: false,
+                            hintext: "Name",
+                            icon: Icons.person,
                           ),
-                          hintext: "Password",
-                          icon: FontAwesomeIcons.lock,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(14.0),
+                        child: Container(
+                          color: Colores("#F6FBFF"),
+                          child: TextFormied(
+                            obscureText: false,
+                            hintext: "Email or phone",
+                            icon: Icons.email,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(14.0),
+                        child: Container(
+                          color: Colores("#F6FBFF"),
+                          child: TextFormied(
+                            obscureText: false,
+                            hintext: "Birthday",
+                            icon: Icons.calendar_today,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(14.0),
+                        child: Container(
+                          color: Colores("#F6FBFF"),
+                          child: TextFormied(
+                            obscureText: _.password,
+                            suffixIcon: IconButton(
+                              icon: _.password
+                                  ? Icon(
+                                      Icons.visibility,
+                                      color: Colors.blue,
+                                    )
+                                  : Icon(
+                                      Icons.visibility_off,
+                                      color: Colors.blue,
+                                    ),
+                              onPressed: () {
+                                _.updatePassword();
+                              },
+                            ),
+                            hintext: "Password",
+                            icon: FontAwesomeIcons.lock,
+                          ),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 1, left: 10),
                         child: Row(
                           children: [
-                            Checkbox(
-                              value: _.valueCheck,
-                              onChanged: (value) {
-                                _.updateCheckbox();
-                              },
+                            Container(
+                              color: Colores("#F6FBFF"),
+                              child: Checkbox(
+                                value: _.valueCheck,
+                                onChanged: (value) {
+                                  _.updateCheckbox();
+                                },
+                              ),
                             ),
                             Text(
                               "I gree with the",
@@ -153,4 +172,6 @@ class RegisterPage extends StatelessWidget {
       ),
     );
   }
+
+ 
 }
