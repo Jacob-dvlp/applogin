@@ -22,7 +22,7 @@ class PagesRouts {
     ),
     GetPage(
       name: NamesOfPages.PASSWORDD,
-      page: () => PassWordPage(),
+      page: () => EmailChange(),
       transition: Transition.zoom,
       title: "Password",
     ),
@@ -59,6 +59,6 @@ class PagesRouts {
         name: NamesOfPages.PROGRESSUCCESS,
         page: () => ProgressSuccess(),
         transition: Transition.zoom,
-        title: "ps")
+        title: "success")
   ];
 }

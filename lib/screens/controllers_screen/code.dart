@@ -5,7 +5,7 @@ class Code extends GetxController {
   GlobalKey key = new GlobalKey();
   @override
   void onInit() {
-    Future.delayed(Duration(seconds: 5), () => Get.offAllNamed("/ps"));
+    Future.delayed(Duration(seconds: 8), () => Get.offAllNamed("/ps"));
     super.onInit();
   }
 }

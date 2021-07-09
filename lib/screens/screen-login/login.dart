@@ -93,11 +93,10 @@ class LoginPage extends StatelessWidget {
                             suffixIcon: IconButton(
                               icon: _.password
                                   ? Icon(
-                                      Icons.visibility,
+                                      Icons.visibility_off,
                                       color: Colors.blue,
                                     )
-                                  : Icon(Icons.visibility_off,
-                                      color: Colors.blue),
+                                  : Icon(Icons.visibility, color: Colors.blue),
                               onPressed: () {
                                 _.updateTextfied();
                               },

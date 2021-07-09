@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'package:login_page/styles/styles.dart';
 import 'package:login_page/widgets/custons.dart';
 
-class PassWordPage extends StatelessWidget {
-  const PassWordPage({Key? key}) : super(key: key);
+class EmailChange extends StatelessWidget {
+  const EmailChange({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
