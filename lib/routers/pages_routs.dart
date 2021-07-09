@@ -50,5 +50,15 @@ class PagesRouts {
       transition: Transition.zoom,
       title: "creat",
     ),
+    GetPage(
+        name: NamesOfPages.SUCCESS,
+        page: () => Success(),
+        transition: Transition.zoom,
+        title: "success"),
+    GetPage(
+        name: NamesOfPages.PROGRESSUCCESS,
+        page: () => ProgressSuccess(),
+        transition: Transition.zoom,
+        title: "ps")
   ];
 }

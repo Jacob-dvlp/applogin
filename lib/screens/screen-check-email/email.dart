@@ -11,12 +11,11 @@ class EmailPage extends StatelessWidget {
     return GetBuilder<RecoverCode>(
       init: RecoverCode(),
       builder: (_) => Scaffold(
-        appBar: AppBar(),
         body: Padding(
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 50),
+                padding: const EdgeInsets.only(top: 250),
                 child: Align(
                   alignment: Alignment.center,
                   child: CircleAvatar(
@@ -46,7 +45,7 @@ class EmailPage extends StatelessWidget {
                 "We heve sent  password recovery instruction\n to your email",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
                 ),
               ),
             ],
